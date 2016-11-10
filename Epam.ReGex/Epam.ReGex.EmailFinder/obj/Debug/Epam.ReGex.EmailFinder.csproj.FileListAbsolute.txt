@@ -1,0 +1,6 @@
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.ReGex\Epam.ReGex.EmailFinder\bin\Debug\Epam.ReGex.EmailFinder.exe.config
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.ReGex\Epam.ReGex.EmailFinder\bin\Debug\Epam.ReGex.EmailFinder.exe
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.ReGex\Epam.ReGex.EmailFinder\bin\Debug\Epam.ReGex.EmailFinder.pdb
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.ReGex\Epam.ReGex.EmailFinder\obj\Debug\Epam.ReGex.EmailFinder.csprojResolveAssemblyReference.cache
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.ReGex\Epam.ReGex.EmailFinder\obj\Debug\Epam.ReGex.EmailFinder.exe
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.ReGex\Epam.ReGex.EmailFinder\obj\Debug\Epam.ReGex.EmailFinder.pdb

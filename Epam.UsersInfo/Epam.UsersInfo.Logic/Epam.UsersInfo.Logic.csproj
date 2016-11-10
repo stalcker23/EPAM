@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{43B0448A-5DDA-4BE6-B17B-7CC85C9B7946}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Epam.UsersInfo.Logic</RootNamespace>
+    <AssemblyName>Epam.UsersInfo.Logic</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AwardLogic.cs" />
+    <Compile Include="UserLogic.cs" />
+    <Compile Include="DaoProvider.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Epam.UserInfo.DalContracts\Epam.UserInfo.DalContracts.csproj">
+      <Project>{9A8C8D77-8085-47C8-BEAD-6C75F5E73901}</Project>
+      <Name>Epam.UserInfo.DalContracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Epam.UserInfo.Entities\Epam.UserInfo.Entities.csproj">
+      <Project>{89c3d2ec-67c1-4628-b19f-e1815b7c8ddc}</Project>
+      <Name>Epam.UserInfo.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Epam.UserInfo.FileDao\Epam.UserInfo.FileDao.csproj">
+      <Project>{189D43DC-210E-416A-A247-B429AEB50159}</Project>
+      <Name>Epam.UserInfo.FileDao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Epam.UsersInfo.LogicContracts\Epam.UserInfo.LogicContracts.csproj">
+      <Project>{03474BD4-9450-45AF-A480-8C73C2BF6999}</Project>
+      <Name>Epam.UserInfo.LogicContracts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

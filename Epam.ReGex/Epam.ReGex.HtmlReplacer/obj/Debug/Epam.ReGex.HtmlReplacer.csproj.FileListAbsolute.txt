@@ -1,0 +1,6 @@
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.ReGex\Epam.ReGex.HtmlReplacer\bin\Debug\Epam.ReGex.HtmlReplacer.exe.config
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.ReGex\Epam.ReGex.HtmlReplacer\bin\Debug\Epam.ReGex.HtmlReplacer.exe
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.ReGex\Epam.ReGex.HtmlReplacer\bin\Debug\Epam.ReGex.HtmlReplacer.pdb
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.ReGex\Epam.ReGex.HtmlReplacer\obj\Debug\Epam.ReGex.HtmlReplacer.exe
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.ReGex\Epam.ReGex.HtmlReplacer\obj\Debug\Epam.ReGex.HtmlReplacer.pdb
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.ReGex\Epam.ReGex.HtmlReplacer\obj\Debug\Epam.ReGex.HtmlReplacer.csprojResolveAssemblyReference.cache

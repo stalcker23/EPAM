@@ -1,0 +1,7 @@
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\EPAM_XT2016_3_3\EPAM_XT2016_3_3_2\bin\Debug\EPAM_XT2016_3_3_2.exe.config
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\EPAM_XT2016_3_3\EPAM_XT2016_3_3_2\bin\Debug\file.txt
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\EPAM_XT2016_3_3\EPAM_XT2016_3_3_2\bin\Debug\EPAM_XT2016_3_3_2.exe
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\EPAM_XT2016_3_3\EPAM_XT2016_3_3_2\bin\Debug\EPAM_XT2016_3_3_2.pdb
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\EPAM_XT2016_3_3\EPAM_XT2016_3_3_2\obj\Debug\EPAM_XT2016_3_3_2.csprojResolveAssemblyReference.cache
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\EPAM_XT2016_3_3\EPAM_XT2016_3_3_2\obj\Debug\EPAM_XT2016_3_3_2.exe
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\EPAM_XT2016_3_3\EPAM_XT2016_3_3_2\obj\Debug\EPAM_XT2016_3_3_2.pdb

@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="EPAM_XT2016_3_8.Barrier" Collapsed="true">
+    <Position X="2.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAIAAAAAAAYAA=</HashCode>
+      <FileName>Barrier.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="EPAM_XT2016_3_8.Stone" Collapsed="true">
+    <Position X="0.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAIAAAAAAAYAA=</HashCode>
+      <FileName>Barrriers\Stone.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EPAM_XT2016_3_8.Swamp" Collapsed="true">
+    <Position X="2.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAIAAAAAAAYAA=</HashCode>
+      <FileName>Barrriers\Swamp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EPAM_XT2016_3_8.Wall" Collapsed="true">
+    <Position X="5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAIAAAAAAAYAA=</HashCode>
+      <FileName>Barrriers\Wall.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EPAM_XT2016_3_8.Bonus" Collapsed="true">
+    <Position X="2.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAACAAAAAAAAAAYAAAAAAAYAA=</HashCode>
+      <FileName>Bonus.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="EPAM_XT2016_3_8.Apple" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAACAAAAAAAAAAYAAAAAAAYAA=</HashCode>
+      <FileName>Bonuses\Apple.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EPAM_XT2016_3_8.Cherry" Collapsed="true">
+    <Position X="2.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAACAAAAAAAAAAYAAAAAAAYAA=</HashCode>
+      <FileName>Bonuses\Cherry.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EPAM_XT2016_3_8.Fish" Collapsed="true">
+    <Position X="5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAACAAAAAAAAAAYAAAAAAAYAA=</HashCode>
+      <FileName>Bonuses\Fish.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EPAM_XT2016_3_8.Bear" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAACAAAAAAAAAAYAAAAAAAYAA=</HashCode>
+      <FileName>Enemies\Bear.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EPAM_XT2016_3_8.Hunter" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAACAAAAAAAAAAYAAAAAAAYAA=</HashCode>
+      <FileName>Enemies\Hunter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EPAM_XT2016_3_8.Wolf" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAACAAAAAAAAAAYAAAAAAAYAA=</HashCode>
+      <FileName>Enemies\Wolf.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EPAM_XT2016_3_8.Enemy" Collapsed="true">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAACAAAAAAAAAAYAAAAAAAYAA=</HashCode>
+      <FileName>Enemy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Left" Position="0.1" />
+  </Class>
+  <Class Name="EPAM_XT2016_3_8.Field" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Field.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EPAM_XT2016_3_8.Player" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAICgAAAAAAIACABAAAAAAAAQAAAAAIAYAA=</HashCode>
+      <FileName>Player.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="EPAM_XT2016_3_8.Program" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="EPAM_XT2016_3_8.IGameObject" Collapsed="true">
+    <Position X="7.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAA=</HashCode>
+      <FileName>Interfaces\IGameObject.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="EPAM_XT2016_3_8.IMove" Collapsed="true">
+    <Position X="9.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IMove.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="EPAM_XT2016_3_8.ITarget" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\ITarget.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

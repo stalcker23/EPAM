@@ -1,0 +1,9 @@
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\EPZM_XT2016_3_4\EPZM_XT2016_3_4\bin\Release\EPZM_XT2016_3_4.exe.config
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\EPZM_XT2016_3_4\EPZM_XT2016_3_4\bin\Release\EPZM_XT2016_3_4.exe
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\EPZM_XT2016_3_4\EPZM_XT2016_3_4\bin\Release\EPZM_XT2016_3_4.pdb
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\EPZM_XT2016_3_4\EPZM_XT2016_3_4\obj\Release\EPAM_XT2016_3_4.csprojResolveAssemblyReference.cache
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\EPZM_XT2016_3_4\EPZM_XT2016_3_4\obj\Release\EPZM_XT2016_3_4.exe
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\EPZM_XT2016_3_4\EPZM_XT2016_3_4\obj\Release\EPZM_XT2016_3_4.pdb
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\EPAM_XT2016_3_4\EPZM_XT2016_3_4\bin\Release\EPZM_XT2016_3_4.exe.config
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\EPAM_XT2016_3_4\EPZM_XT2016_3_4\obj\Release\EPZM_XT2016_3_4.exe
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\EPAM_XT2016_3_4\EPZM_XT2016_3_4\obj\Release\EPZM_XT2016_3_4.pdb

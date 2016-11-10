@@ -1,0 +1,2 @@
+11-02-2016-15-35-41|System.IO.FileSystemWatcher|D:\\Watcher\asd (3).txt|Changed
+11-02-2016-15-35-41|System.IO.FileSystemWatcher|D:\\Watcher\asd (3).txt|Changed

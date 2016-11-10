@@ -1,0 +1,3 @@
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\EPAM_XT2016_3_1\EPAM_XT2016_3_1_3\bin\Debug\EPAM_XT2016_3_1_3.exe.config
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\EPAM_XT2016_3_1\EPAM_XT2016_3_1_3\obj\Debug\EPAM_XT2016_3_1_3.exe
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\EPAM_XT2016_3_1\EPAM_XT2016_3_1_3\obj\Debug\EPAM_XT2016_3_1_3.pdb

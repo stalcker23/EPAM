@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.ReGex.DateExistance", "Epam.ReGex.DateExistance\Epam.ReGex.DateExistance.csproj", "{38FDFF96-8150-49B6-9FAB-D25132842469}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.ReGex.HtmlReplacer", "Epam.ReGex.HtmlReplacer\Epam.ReGex.HtmlReplacer.csproj", "{B27FE5BF-0EC7-4D5C-885F-17052EE0D362}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.ReGex.EmailFinder", "Epam.ReGex.EmailFinder\Epam.ReGex.EmailFinder.csproj", "{1B79FD63-47C7-4BD9-865F-807A3B2075E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.ReGex.TimeCounter", "Epam.ReGex.TimeCounter\Epam.ReGex.TimeCounter.csproj", "{890E1680-56FB-4ACE-BE4E-4117215FA3C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epam.ReGex.NumberValidator", "Epam.ReGex.NumberValidator\Epam.ReGex.NumberValidator.csproj", "{983A7A21-56ED-4441-B304-243C56C8A647}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{38FDFF96-8150-49B6-9FAB-D25132842469}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38FDFF96-8150-49B6-9FAB-D25132842469}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38FDFF96-8150-49B6-9FAB-D25132842469}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38FDFF96-8150-49B6-9FAB-D25132842469}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B27FE5BF-0EC7-4D5C-885F-17052EE0D362}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B27FE5BF-0EC7-4D5C-885F-17052EE0D362}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B27FE5BF-0EC7-4D5C-885F-17052EE0D362}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B27FE5BF-0EC7-4D5C-885F-17052EE0D362}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B79FD63-47C7-4BD9-865F-807A3B2075E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B79FD63-47C7-4BD9-865F-807A3B2075E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B79FD63-47C7-4BD9-865F-807A3B2075E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B79FD63-47C7-4BD9-865F-807A3B2075E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{890E1680-56FB-4ACE-BE4E-4117215FA3C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{890E1680-56FB-4ACE-BE4E-4117215FA3C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{890E1680-56FB-4ACE-BE4E-4117215FA3C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{890E1680-56FB-4ACE-BE4E-4117215FA3C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{983A7A21-56ED-4441-B304-243C56C8A647}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{983A7A21-56ED-4441-B304-243C56C8A647}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{983A7A21-56ED-4441-B304-243C56C8A647}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{983A7A21-56ED-4441-B304-243C56C8A647}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

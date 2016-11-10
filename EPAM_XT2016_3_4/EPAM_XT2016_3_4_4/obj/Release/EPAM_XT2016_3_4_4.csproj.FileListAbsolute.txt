@@ -1,0 +1,5 @@
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\EPZM_XT2016_3_4\EPAM_XT2016_3_4_4\bin\Release\EPAM_XT2016_3_4_4.exe.config
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\EPZM_XT2016_3_4\EPAM_XT2016_3_4_4\bin\Release\EPAM_XT2016_3_4_4.exe
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\EPZM_XT2016_3_4\EPAM_XT2016_3_4_4\bin\Release\EPAM_XT2016_3_4_4.pdb
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\EPZM_XT2016_3_4\EPAM_XT2016_3_4_4\obj\Release\EPAM_XT2016_3_4_4.exe
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\EPZM_XT2016_3_4\EPAM_XT2016_3_4_4\obj\Release\EPAM_XT2016_3_4_4.pdb

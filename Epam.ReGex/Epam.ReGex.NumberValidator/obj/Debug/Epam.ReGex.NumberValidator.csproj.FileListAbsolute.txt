@@ -1,0 +1,5 @@
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.ReGex\Epam.ReGex.NumberValidator\bin\Debug\Epam.ReGex.NumberValidator.exe.config
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.ReGex\Epam.ReGex.NumberValidator\bin\Debug\Epam.ReGex.NumberValidator.exe
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.ReGex\Epam.ReGex.NumberValidator\bin\Debug\Epam.ReGex.NumberValidator.pdb
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.ReGex\Epam.ReGex.NumberValidator\obj\Debug\Epam.ReGex.NumberValidator.exe
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.ReGex\Epam.ReGex.NumberValidator\obj\Debug\Epam.ReGex.NumberValidator.pdb

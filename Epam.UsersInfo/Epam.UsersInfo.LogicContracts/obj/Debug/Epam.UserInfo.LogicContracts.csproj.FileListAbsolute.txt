@@ -1,0 +1,7 @@
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.UsersInfo\Epam.UsersInfo.LogicContracts\bin\Debug\Epam.UsersInfo.LogicContracts.dll
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.UsersInfo\Epam.UsersInfo.LogicContracts\bin\Debug\Epam.UsersInfo.LogicContracts.pdb
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.UsersInfo\Epam.UsersInfo.LogicContracts\bin\Debug\Epam.UserInfo.Entities.dll
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.UsersInfo\Epam.UsersInfo.LogicContracts\bin\Debug\Epam.UserInfo.Entities.pdb
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.UsersInfo\Epam.UsersInfo.LogicContracts\obj\Debug\Epam.UsersInfo.LogicContracts.dll
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.UsersInfo\Epam.UsersInfo.LogicContracts\obj\Debug\Epam.UsersInfo.LogicContracts.pdb
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.UsersInfo\Epam.UsersInfo.LogicContracts\obj\Debug\Epam.UserInfo.LogicContracts.csprojResolveAssemblyReference.cache

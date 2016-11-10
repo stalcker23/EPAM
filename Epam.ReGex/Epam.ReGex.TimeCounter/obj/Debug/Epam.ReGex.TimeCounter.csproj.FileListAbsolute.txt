@@ -1,0 +1,5 @@
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.ReGex\Epam.ReGex.TimeCounter\bin\Debug\Epam.ReGex.TimeCounter.exe.config
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.ReGex\Epam.ReGex.TimeCounter\bin\Debug\Epam.ReGex.TimeCounter.exe
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.ReGex\Epam.ReGex.TimeCounter\bin\Debug\Epam.ReGex.TimeCounter.pdb
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.ReGex\Epam.ReGex.TimeCounter\obj\Debug\Epam.ReGex.TimeCounter.exe
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.ReGex\Epam.ReGex.TimeCounter\obj\Debug\Epam.ReGex.TimeCounter.pdb

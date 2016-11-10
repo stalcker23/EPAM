@@ -1,0 +1,6 @@
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.ReGex\Epam.ReGex.DateExistance\bin\Debug\Epam.ReGex.DateExistance.exe.config
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.ReGex\Epam.ReGex.DateExistance\bin\Debug\Epam.ReGex.DateExistance.exe
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.ReGex\Epam.ReGex.DateExistance\bin\Debug\Epam.ReGex.DateExistance.pdb
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.ReGex\Epam.ReGex.DateExistance\obj\Debug\Epam.ReGex.DateExistance.csprojResolveAssemblyReference.cache
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.ReGex\Epam.ReGex.DateExistance\obj\Debug\Epam.ReGex.DateExistance.exe
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.ReGex\Epam.ReGex.DateExistance\obj\Debug\Epam.ReGex.DateExistance.pdb

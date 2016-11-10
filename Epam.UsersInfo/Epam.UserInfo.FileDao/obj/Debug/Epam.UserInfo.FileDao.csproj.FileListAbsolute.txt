@@ -1,0 +1,9 @@
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.UsersInfo\Epam.UserInfo.FileDao\bin\Debug\Epam.UserInfo.FileDao.dll
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.UsersInfo\Epam.UserInfo.FileDao\bin\Debug\Epam.UserInfo.FileDao.pdb
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.UsersInfo\Epam.UserInfo.FileDao\bin\Debug\Epam.UserInfo.DalContracts.dll
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.UsersInfo\Epam.UserInfo.FileDao\bin\Debug\Epam.UserInfo.Entities.dll
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.UsersInfo\Epam.UserInfo.FileDao\bin\Debug\Epam.UserInfo.DalContracts.pdb
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.UsersInfo\Epam.UserInfo.FileDao\bin\Debug\Epam.UserInfo.Entities.pdb
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.UsersInfo\Epam.UserInfo.FileDao\obj\Debug\Epam.UserInfo.FileDao.csprojResolveAssemblyReference.cache
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.UsersInfo\Epam.UserInfo.FileDao\obj\Debug\Epam.UserInfo.FileDao.dll
+C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.UsersInfo\Epam.UserInfo.FileDao\obj\Debug\Epam.UserInfo.FileDao.pdb
