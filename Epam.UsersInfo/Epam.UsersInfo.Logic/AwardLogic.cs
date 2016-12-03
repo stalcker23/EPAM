@@ -12,6 +12,7 @@ namespace Epam.UserInfo.Logic
     public class AwardLogic : IAwardLogic
     {
         private IAwardDao awardDao;
+        private IDBDao dbDao;
 
         public AwardLogic()
         {

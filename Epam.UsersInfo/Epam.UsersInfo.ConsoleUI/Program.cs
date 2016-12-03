@@ -25,70 +25,71 @@ namespace Epam.UserInfo.ConsoleUI
 
         private static void Main(string[] args)
         {
-            while (true)
-            {
-                try
-                {
-                    Console.Clear();
-                    Console.WriteLine("1. Add user");
-                    Console.WriteLine("2. Show users");
-                    Console.WriteLine("3. Delete user");
-                    Console.WriteLine("4. Add user's award");
-                    Console.WriteLine("5. Show users with awards");
-                    Console.WriteLine("6. Add award");
-                    Console.WriteLine("7. Show awards");
-                    Console.WriteLine("0. Exit");
+            awardLogic.GetAll();
+            //while (true)
+            //{
+            //    try
+            //    {
+            //        Console.Clear();
+            //        Console.WriteLine("1. Add user");
+            //        Console.WriteLine("2. Show users");
+            //        Console.WriteLine("3. Delete user");
+            //        Console.WriteLine("4. Add user's award");
+            //        Console.WriteLine("5. Show users with awards");
+            //        Console.WriteLine("6. Add award");
+            //        Console.WriteLine("7. Show awards");
+            //        Console.WriteLine("0. Exit");
 
-                    var entry = Console.ReadKey(intercept: true);
+            //        var entry = Console.ReadKey(intercept: true);
 
-                    switch (entry.Key)
-                    {
-                        case ConsoleKey.D1:
-                            {
-                                AddUser();
-                                break;
-                            }
-                        case ConsoleKey.D2:
-                            {
-                                ShowUsers();
-                                break;
-                            }
-                        case ConsoleKey.D3:
-                            {
-                                DeleteUser();
-                                break;
-                            }
-                        case ConsoleKey.D4:
-                            AddAwardToUser();
-                            break;
+            //        switch (entry.Key)
+            //        {
+            //            case ConsoleKey.D1:
+            //                {
+            //                    AddUser();
+            //                    break;
+            //                }
+            //            case ConsoleKey.D2:
+            //                {
+            //                    ShowUsers();
+            //                    break;
+            //                }
+            //            case ConsoleKey.D3:
+            //                {
+            //                    DeleteUser();
+            //                    break;
+            //                }
+            //            case ConsoleKey.D4:
+            //                AddAwardToUser();
+            //                break;
 
-                        case ConsoleKey.D5:
-                            ShowUsersWithAwards();
-                            break;
+            //            case ConsoleKey.D5:
+            //                ShowUsersWithAwards();
+            //                break;
 
-                        case ConsoleKey.D6:
-                            AddAward();
-                            break;
+            //            case ConsoleKey.D6:
+            //                AddAward();
+            //                break;
 
-                        case ConsoleKey.D7:
-                            ShowAwards();
-                            Console.ReadLine();
-                            break;
+            //            case ConsoleKey.D7:
+            //                ShowAwards();
+            //                Console.ReadLine();
+            //                break;
 
-                        case ConsoleKey.D0:
-                            {
-                                return;
-                            }
-                        default:
-                            break;
-                    }
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine($"Error: {e.Message}");
-                    Console.ReadLine();
-                }
-            }
+            //            case ConsoleKey.D0:
+            //                {
+            //                    return;
+            //                }
+            //            default:
+            //                break;
+            //        }
+            //    }
+            //    catch (Exception e)
+            //    {
+            //        Console.WriteLine($"Error: {e.Message}");
+            //        Console.ReadLine();
+            //    }
+            //}
         }
 
         private static void ShowUsers()

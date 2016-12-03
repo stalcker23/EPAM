@@ -10,11 +10,13 @@ namespace Epam.UserInfo.Logic
     {
         private IUserDao userDao;
         private IAwardDao awardDao;
+        private IDBDao dbDao;
 
         public UserLogic()
         {
             userDao = DaoProvider.UserDao;
             awardDao = DaoProvider.AwardDao;
+            dbDao = DaoProvider.DataBaseDao;
         }
 
         public bool Delete(int id)

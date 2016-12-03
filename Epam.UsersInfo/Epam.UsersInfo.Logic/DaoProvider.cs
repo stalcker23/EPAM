@@ -1,5 +1,6 @@
 ﻿using Epam.UserInfo.DalContracts;
 using Epam.UserInfo.FileDal;
+using Epam.UserInfo.FileDao;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -17,6 +18,11 @@ namespace Epam.UserInfo.Logic
             {
                 UserDao = new FileUserDao();
                 AwardDao = new FileAwardDao();
+            }
+            if (string.Compare(ConfigurationManager.AppSettings["DaoFormat"], "DB") == 0)
+            {
+                UserDao = new DataBaseDao();
+                AwardDao = new DataBaseDao();
             }
         }
 
