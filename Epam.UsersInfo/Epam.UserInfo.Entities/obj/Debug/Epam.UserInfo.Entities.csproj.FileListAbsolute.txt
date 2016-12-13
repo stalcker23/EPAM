@@ -1,5 +1,0 @@
-C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.UsersInfo\Epam.UserInfo.Entities\bin\Debug\Epam.UserInfo.Entities.dll
-C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.UsersInfo\Epam.UserInfo.Entities\bin\Debug\Epam.UserInfo.Entities.pdb
-C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.UsersInfo\Epam.UserInfo.Entities\obj\Debug\Epam.UserInfo.Entities.csprojResolveAssemblyReference.cache
-C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.UsersInfo\Epam.UserInfo.Entities\obj\Debug\Epam.UserInfo.Entities.dll
-C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.UsersInfo\Epam.UserInfo.Entities\obj\Debug\Epam.UserInfo.Entities.pdb

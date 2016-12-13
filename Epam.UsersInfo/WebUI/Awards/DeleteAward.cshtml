@@ -1,0 +1,67 @@
+﻿@using Epam.UsersInfo.WebUI.Models;
+@{
+    Layout = "~/_Layout.cshtml";
+    bool failed = false;
+    if (IsPost)
+    {
+        int result;
+        var Id = Request["deleteId"];
+        if (int.TryParse(Id, out result))
+        {
+            try
+            {
+                if (Common.AwardBll.IsAwarded(result))
+                {
+                    <form method="post" action="~/Awards/ShowAwards" class="form-inline">
+                    <input type="hidden" class="form-control" id="deleteId" name="deleteId" value="@result" placeholder="Enter ID">
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                </div>
+                                <div class="modal-body">
+                                    One or more users have this award. Do you want to continue?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                    <button type="submit" class="btn btn-primary">Accept</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                }
+                else
+                {
+                    Common.AwardBll.Delete(result);
+                    Response.Redirect("~/Awards/ShowAwards");
+                }
+            }
+            catch (Exception ex)
+            {
+                <div class="alert alert-danger">
+                    @ex.Message
+                </div>
+                }
+            }
+            else
+            {
+                failed = true;
+            }
+        }
+    }
+@if (failed)
+{
+    <div class="alert alert-danger">
+        Id is not correct
+    </div>
+}
+
+<form method="post" class="form-inline">
+    <div class="form-group">
+        <label for="deleteId">ID</label>
+        <input type="text" class="form-control" id="deleteId" name="deleteId" placeholder="Enter ID">
+    </div>
+    <button type="submit" class="btn btn-danger" data-toggle="modal" data-target="#myModal"> Delete award</button>
+</form>

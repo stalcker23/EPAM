@@ -1,0 +1,42 @@
+﻿@using Epam.UsersInfo.WebUI.Models;
+@{
+    Layout = "~/_Layout.cshtml";
+}
+<div class="panel panel-default">
+    <div class="panel-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>DateOfBirth</th>
+                    <th>Age</th>
+                    @if (User.IsInRole("User"))
+                    {
+                        <th>Awards</th>
+                    }
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var user in Common.UserBll.GetAll())
+                {
+                    <tr>
+                        <td>@user.Id</td>
+                        <td>@user.Name</td>
+                        <td>@user.DateOfBirth.ToShortDateString()</td>
+                        <td>@user.Age</td>
+                        @if (User.IsInRole("User"))
+                        {
+                            <td>
+                                @foreach (var award in Common.AwardBll.GetAwardsByIDs(Common.UserBll.GetUserAwardsIDs(user.Id)))
+                                {
+                                    <text>@award.Title</text>
+                                }
+                            </td>
+                        }
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

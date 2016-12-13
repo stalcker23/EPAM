@@ -1,4 +1,4 @@
-﻿using Epam.UserInfo.Entities;
+﻿using Epam.UsersInfo.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,14 +13,16 @@ namespace Epam.UserInfo.DalContracts
 
         IEnumerable<User> GetAll();
 
-        User GetById(int id);
+        User GetByID(int id);
 
-        bool Delete(int id);
+        int [] GetUserAwardsIDs(int ID);
 
-        int[] GetUserAwardsIDs(int iD);
+        bool Remove(int id);
 
         bool AddUserAward(int userID, int awardID);
 
         bool Contains(int id);
+
+        bool Update(int id, User user);
     }
 }

@@ -1,4 +1,4 @@
-﻿using Epam.UserInfo.Entities;
+﻿using Epam.UsersInfo.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,8 +15,17 @@ namespace Epam.UserInfo.DalContracts
 
         IEnumerable<Award> GetAwardsByIDs(int[] IDs);
 
+        int GetMaxId();
+
         bool Contains(int id);
 
-        int GetMaxId();
+        bool Remove(int id);
+
+        Award GetByID(int id);
+
+        bool Update(int id, Award award);
+
+        bool IsAwarded(int id);
+
     }
 }

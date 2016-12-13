@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="~/Content/include/Styles.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!— Collect the nav links, forms, and other content for toggling —>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <ul class="nav navbar-nav">
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Users <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+
+                                    <li><a href="~/Users/DeleteUser">Remove</a></li>
+                                    <li><a href="~/Users/CheckForEditUser">Edit</a></li>
+                                    <li><a href="~/Users/AddUser">Add</a></li>
+                                    <li><a href="~/Users/ShowUsers">Show all</a></li>
+
+                                </ul>
+                            </li>
+
+
+                            <li>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Awards <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="~/Awards/AddAward">Add</a></li>
+                                    <li><a href="~/Awards/ShowAwards">Show all</a></li>
+                                    <li><a href="~/Awards/DeleteAward">Remove</a></li>
+                                    <li><a href="~/Awards/CheckForEditAward">Edit</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+
+                        <ul class="nav navbar-nav navbar-default">
+                            <li><a href="~/Accounts/CheckForEditAccountRole.cshtml">Change Accounts Role</a></li>
+                        </ul>
+                    }
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                <a href="~/Auth/Logout.cshtml" title="" style="font-size:large">User: @User.Identity.Name Sign out</a>
+                            }
+                            else
+                            { <a href="~/Auth/Login" style="font-size:large"> Guest. Sign in</a> }
+                        </li>
+                    </ul>
+                </div><!— /.navbar-collapse —>
+            </div><!— /.container-fluid —>
+        </nav>
+        @RenderBody()
+    </div>
+    <script src="~/Scripts/jquery-3.1.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/include/Scripts.js"></script>
+</body>
+</html>

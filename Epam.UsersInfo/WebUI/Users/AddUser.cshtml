@@ -1,0 +1,62 @@
+﻿@using System.Globalization;
+@using Epam.UsersInfo.Entities;
+@using Epam.UsersInfo.WebUI.Models;
+@{
+    if (!User.IsInRole("Admin"))
+    {
+        Response.SetStatus(HttpStatusCode.Forbidden);
+    }
+    Layout = "~/_Layout.cshtml";
+    if (IsPost)
+    {
+        var name = Request["name"];
+        var surname = Request["surname"];
+        var patronymic = Request["patronymic"];
+        var dateOfBirth = Request["date"];
+        try
+        {
+            if (String.IsNullOrEmpty(name) || String.IsNullOrEmpty(surname))
+            {
+                throw new ArgumentException("Name can't be null or empty");
+            }
+            DateTime tempDate;
+            if (DateTime.TryParseExact(dateOfBirth, Common.DateFormat, CultureInfo.InvariantCulture, DateTimeStyles.None, out tempDate))
+            {
+                string userName = $"{name}*{surname}*{patronymic}";
+                Common.UserBll.Save(new User { Name = userName, DateOfBirth = tempDate });
+                Response.Redirect("~/Users/ShowUsers");
+            }
+            else
+            {
+                throw new ArgumentException("Date incorrect");
+            }
+        }
+        catch (Exception ex)
+        {
+            <div class="alert alert-danger">
+                @ex.Message
+            </div>
+        }
+    }
+}
+
+
+<form method="post" class="form-inline">
+    <div class="form-group">
+        <label for="name">Name: </label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Enter name">
+    </div>
+    <div class="form-group">
+        <label for="surname">Surname: </label>
+        <input type="text" class="form-control" id="surname" name="surname" placeholder="Enter surname">
+    </div>
+    <div class="form-group">
+        <label for="patronymic">Patronymic: </label>
+        <input type="text" class="form-control" id="patronymic" name="patronymic" placeholder="Enter patronymic">
+    </div>
+    <div class="form-group">
+        <label for="date">Date</label>
+        <input type="text" class="form-control" id="date" name="date" placeholder="dd/MM/yyyy">
+    </div>
+    <button type="submit" class="btn btn-success"> Add user</button>
+</form>

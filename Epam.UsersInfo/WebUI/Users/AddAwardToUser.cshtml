@@ -1,0 +1,51 @@
+﻿@using Epam.UsersInfo.WebUI.Models;
+@{
+    if (!User.IsInRole("Admin"))
+    {
+        Response.SetStatus(HttpStatusCode.Forbidden);
+    }
+    Layout = "~/_Layout.cshtml";
+    bool failed = false;
+    if (IsPost)
+    {
+        var userField = Request["userID"];
+        var awardField = Request["awardID"];
+        int userID;
+        int awardID;
+        if (int.TryParse(userField, out userID) && int.TryParse(awardField, out awardID))
+        {
+            try
+            {
+                Common.UserBll.AddAwardToUser(userID, awardID);
+                Response.Redirect("~/Users/ShowUsers");
+            }
+            catch (Exception ex)
+            {
+                <div class="alert alert-danger">
+                    @ex.Message
+                </div>
+                }
+            }
+            else
+            {
+                failed = true;
+            }
+        }
+    }
+@if (failed)
+{
+    <div class="alert alert-danger">
+        Id is not correct
+    </div>
+}
+<form method="post" class="form-inline">
+    <div class="form-group">
+        <label for="userID">User ID</label>
+        <input type="text" class="form-control" id="userID" name="userID" placeholder="Enter User Id">
+    </div>
+    <div class="form-group">
+        <label for="awardID">Award ID</label>
+        <input type="text" class="form-control" id="awardID" name="awardID" placeholder="Enter award Id">
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+</form>

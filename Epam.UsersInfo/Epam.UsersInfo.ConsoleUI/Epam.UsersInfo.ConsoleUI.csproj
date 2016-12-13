@@ -4,13 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B741A7EB-30F6-45F6-8B57-632CA505C8A4}</ProjectGuid>
+    <ProjectGuid>{95F8B592-EF06-48C3-A580-FAABA243076D}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Epam.UsersInfo.ConsoleUI</RootNamespace>
     <AssemblyName>Epam.UsersInfo.ConsoleUI</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Configuration" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -47,20 +48,22 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Epam.UserInfo.Entities\Epam.UserInfo.Entities.csproj">
-      <Project>{89C3D2EC-67C1-4628-B19F-E1815B7C8DDC}</Project>
-      <Name>Epam.UserInfo.Entities</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Epam.UsersInfo.LogicContracts\Epam.UserInfo.LogicContracts.csproj">
-      <Project>{03474BD4-9450-45AF-A480-8C73C2BF6999}</Project>
+    <ProjectReference Include="..\Epam.UserInfo.LogicContracts\Epam.UserInfo.LogicContracts.csproj">
+      <Project>{3021d710-e31a-4492-90d0-49eb530d0ee4}</Project>
       <Name>Epam.UserInfo.LogicContracts</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Epam.UsersInfo.Logic\Epam.UsersInfo.Logic.csproj">
-      <Project>{43B0448A-5DDA-4BE6-B17B-7CC85C9B7946}</Project>
-      <Name>Epam.UsersInfo.Logic</Name>
+    <ProjectReference Include="..\Epam.UserInfo.Logic\Epam.UserInfo.Logic.csproj">
+      <Project>{869C9046-D09E-4F1C-B43B-05BCA7499FEC}</Project>
+      <Name>Epam.UserInfo.Logic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Epam.UsersInfo.Entities\Epam.UsersInfo.Entities.csproj">
+      <Project>{B6F3AC39-3F60-45EE-9E25-CAB4D9A6C0D3}</Project>
+      <Name>Epam.UsersInfo.Entities</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

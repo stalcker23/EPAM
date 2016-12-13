@@ -1,0 +1,51 @@
+﻿@using Epam.UsersInfo.WebUI.Models;
+@using Epam.UsersInfo.Entities;
+
+@{
+    Layout = "~/_Layout.cshtml";
+
+    if (IsPost)
+    {
+        if (Request["Visited"] == "true")
+        {
+            var Id = int.Parse(Request["ID"]);
+            Award award = Common.AwardBll.GetByID(Id);
+            <div class="form-group">
+                <label> Award name - @award.Title;</label>
+            </div>
+        }
+        else
+        {
+            var Id = int.Parse(Request["ID"]);
+            var title = Request["title"];
+            
+            try
+            {
+                if (String.IsNullOrWhiteSpace(title))
+                {
+                    throw new ArgumentException("Title can't be null or white space");
+                }
+
+                    Common.AwardBll.Update(Id, new Award { Title = title });
+                    Response.Redirect("~/Awards/ShowAwards");
+            }
+            catch (Exception ex)
+            {
+                <div class="alert alert-danger">
+                    @ex.Message
+                </div>
+            }
+        }
+    }
+}
+
+
+<form method="post" class="form-inline">
+    <div class="form-group">
+        <label for="title">Title: </label>
+        <input type="text" class="form-control" id="title" name="title" placeholder="Enter title">
+    </div>
+    <button type="submit" class="btn btn-primary"> Edit award</button>
+    <input type="hidden" name="ID" value="@Request["ID"]" />
+    <input type="hidden" name="Visited" value="false" />
+</form>

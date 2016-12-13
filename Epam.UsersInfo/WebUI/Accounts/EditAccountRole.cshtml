@@ -1,0 +1,47 @@
+﻿@using Epam.UsersInfo.WebUI.Models;
+@using Epam.UsersInfo.Entities;
+@using System.Globalization;
+@{
+    if (!User.IsInRole("Admin"))
+    {
+        Response.SetStatus(HttpStatusCode.Forbidden);
+    }
+    Layout = "~/_Layout.cshtml";
+
+    if (IsPost)
+    {
+        if (Request["Visited"] == "true")
+        {
+            var Id = int.Parse(Request["ID"]);
+            Account account = Common.AccountBll.GetByID(Id);
+            <div class="form-group">
+                <label> Account login - @account.Login; Role - @account.Role</label>
+            </div>
+        }
+        else
+        {
+            var Id = int.Parse(Request["ID"]);
+            try
+            {
+                Common.AccountBll.ChangeRole(Id);
+                Response.Redirect("~/Users/ShowUsers");
+            }
+            catch (Exception ex)
+            {
+                <form action="~/Accounts/EditAccountRole.cshtml" method="post">
+                    <div class="alert alert-danger">
+                        @ex.Message
+                    </div>
+                    <a class="btn btn-primary btn-lg btn-block" href="~/Users/ShowUsers.cshtml">Edit another account</a>                
+                </form>    
+                return;
+            }
+        }
+    }
+}
+
+<form method="post" class="form-inline">
+    <button type="submit" class="btn btn-primary"> Change Role</button>
+    <input type="hidden" name="ID" value="@Request["ID"]" />
+    <input type="hidden" name="Visited" value="false" />
+</form>

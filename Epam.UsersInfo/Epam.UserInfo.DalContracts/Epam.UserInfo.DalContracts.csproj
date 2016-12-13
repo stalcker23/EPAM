@@ -4,12 +4,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9A8C8D77-8085-47C8-BEAD-6C75F5E73901}</ProjectGuid>
+    <ProjectGuid>{68FE3E69-EB97-447F-90E7-8CBFE4C7BF6F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Epam.UserInfo.DalContracts</RootNamespace>
     <AssemblyName>Epam.UserInfo.DalContracts</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -40,15 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IAccountDao.cs" />
     <Compile Include="IAwardDao.cs" />
-    <Compile Include="IDBDao.cs" />
     <Compile Include="IUserDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Epam.UserInfo.Entities\Epam.UserInfo.Entities.csproj">
-      <Project>{89C3D2EC-67C1-4628-B19F-E1815B7C8DDC}</Project>
-      <Name>Epam.UserInfo.Entities</Name>
+    <ProjectReference Include="..\Epam.UsersInfo.Entities\Epam.UsersInfo.Entities.csproj">
+      <Project>{B6F3AC39-3F60-45EE-9E25-CAB4D9A6C0D3}</Project>
+      <Name>Epam.UsersInfo.Entities</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,0 +1,9 @@
+C:\Users\a-zen\Desktop\NewVersion\ETasks-master\Epam.UsersInfo\Epam.UserInfo.DBDal\bin\Debug\Epam.UserInfo.DBDal.dll
+C:\Users\a-zen\Desktop\NewVersion\ETasks-master\Epam.UsersInfo\Epam.UserInfo.DBDal\bin\Debug\Epam.UserInfo.DBDal.pdb
+C:\Users\a-zen\Desktop\NewVersion\ETasks-master\Epam.UsersInfo\Epam.UserInfo.DBDal\bin\Debug\Epam.UserInfo.DalContracts.dll
+C:\Users\a-zen\Desktop\NewVersion\ETasks-master\Epam.UsersInfo\Epam.UserInfo.DBDal\bin\Debug\Epam.UsersInfo.Entities.dll
+C:\Users\a-zen\Desktop\NewVersion\ETasks-master\Epam.UsersInfo\Epam.UserInfo.DBDal\bin\Debug\Epam.UserInfo.DalContracts.pdb
+C:\Users\a-zen\Desktop\NewVersion\ETasks-master\Epam.UsersInfo\Epam.UserInfo.DBDal\bin\Debug\Epam.UsersInfo.Entities.pdb
+C:\Users\a-zen\Desktop\NewVersion\ETasks-master\Epam.UsersInfo\Epam.UserInfo.DBDal\obj\Debug\Epam.UserInfo.DBDal.csprojResolveAssemblyReference.cache
+C:\Users\a-zen\Desktop\NewVersion\ETasks-master\Epam.UsersInfo\Epam.UserInfo.DBDal\obj\Debug\Epam.UserInfo.DBDal.dll
+C:\Users\a-zen\Desktop\NewVersion\ETasks-master\Epam.UsersInfo\Epam.UserInfo.DBDal\obj\Debug\Epam.UserInfo.DBDal.pdb

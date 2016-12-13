@@ -1,0 +1,26 @@
+﻿@using Epam.UsersInfo.WebUI.Models;
+@{
+    Layout = "~/_Layout.cshtml";
+}
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Title</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var award in Common.AwardBll.GetAll())
+                {
+                    <tr>
+                        <td>@award.Id</td>
+                        <td>@award.Title</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

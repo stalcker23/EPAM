@@ -1,7 +1,21 @@
-C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.UsersInfo\Epam.UserInfo.DalContracts\bin\Debug\Epam.UserInfo.DalContracts.dll
-C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.UsersInfo\Epam.UserInfo.DalContracts\bin\Debug\Epam.UserInfo.DalContracts.pdb
-C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.UsersInfo\Epam.UserInfo.DalContracts\bin\Debug\Epam.UserInfo.Entities.dll
-C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.UsersInfo\Epam.UserInfo.DalContracts\bin\Debug\Epam.UserInfo.Entities.pdb
-C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.UsersInfo\Epam.UserInfo.DalContracts\obj\Debug\Epam.UserInfo.DalContracts.csprojResolveAssemblyReference.cache
-C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.UsersInfo\Epam.UserInfo.DalContracts\obj\Debug\Epam.UserInfo.DalContracts.dll
-C:\Users\Артем\Documents\Visual Studio 2015\Projects\Epam.UsersInfo\Epam.UserInfo.DalContracts\obj\Debug\Epam.UserInfo.DalContracts.pdb
+D:\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UserInfo.DalContracts\bin\Debug\Epam.UserInfo.DalContracts.dll
+D:\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UserInfo.DalContracts\bin\Debug\Epam.UserInfo.DalContracts.pdb
+D:\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UserInfo.DalContracts\bin\Debug\Epam.UsersInfo.Entities.dll
+D:\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UserInfo.DalContracts\bin\Debug\Epam.UsersInfo.Entities.pdb
+D:\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UserInfo.DalContracts\obj\Debug\Epam.UserInfo.DalContracts.dll
+D:\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UserInfo.DalContracts\obj\Debug\Epam.UserInfo.DalContracts.pdb
+D:\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UserInfo.DalContracts\obj\Debug\Epam.UserInfo.DalContracts.csprojResolveAssemblyReference.cache
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UserInfo.DalContracts\bin\Debug\Epam.UserInfo.DalContracts.dll
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UserInfo.DalContracts\bin\Debug\Epam.UserInfo.DalContracts.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UserInfo.DalContracts\bin\Debug\Epam.UsersInfo.Entities.dll
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UserInfo.DalContracts\bin\Debug\Epam.UsersInfo.Entities.pdb
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UserInfo.DalContracts\obj\Debug\Epam.UserInfo.DalContracts.csprojResolveAssemblyReference.cache
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UserInfo.DalContracts\obj\Debug\Epam.UserInfo.DalContracts.dll
+C:\Users\rnoctezuma\Desktop\Repository\ETasks\Epam.UsersInfo\Epam.UserInfo.DalContracts\obj\Debug\Epam.UserInfo.DalContracts.pdb
+C:\Users\a-zen\Desktop\NewVersion\ETasks-master\Epam.UsersInfo\Epam.UserInfo.DalContracts\bin\Debug\Epam.UserInfo.DalContracts.dll
+C:\Users\a-zen\Desktop\NewVersion\ETasks-master\Epam.UsersInfo\Epam.UserInfo.DalContracts\bin\Debug\Epam.UserInfo.DalContracts.pdb
+C:\Users\a-zen\Desktop\NewVersion\ETasks-master\Epam.UsersInfo\Epam.UserInfo.DalContracts\bin\Debug\Epam.UsersInfo.Entities.dll
+C:\Users\a-zen\Desktop\NewVersion\ETasks-master\Epam.UsersInfo\Epam.UserInfo.DalContracts\bin\Debug\Epam.UsersInfo.Entities.pdb
+C:\Users\a-zen\Desktop\NewVersion\ETasks-master\Epam.UsersInfo\Epam.UserInfo.DalContracts\obj\Debug\Epam.UserInfo.DalContracts.csprojResolveAssemblyReference.cache
+C:\Users\a-zen\Desktop\NewVersion\ETasks-master\Epam.UsersInfo\Epam.UserInfo.DalContracts\obj\Debug\Epam.UserInfo.DalContracts.dll
+C:\Users\a-zen\Desktop\NewVersion\ETasks-master\Epam.UsersInfo\Epam.UserInfo.DalContracts\obj\Debug\Epam.UserInfo.DalContracts.pdb

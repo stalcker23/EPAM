@@ -1,0 +1,33 @@
+﻿@using Epam.UsersInfo.Entities;
+@using Epam.UsersInfo.WebUI.Models;
+@{
+    Layout = "~/_Layout.cshtml";
+    if (IsPost)
+    {
+        var title = Request["title"];
+
+        try
+        {
+            if (String.IsNullOrWhiteSpace(title))
+            {
+                throw new ArgumentException("Title can't be null or empty");
+            }
+            Common.AwardBll.Save(new Award { Title = title });
+            Response.Redirect("~/Awards/ShowAwards");
+        }
+        catch (Exception ex)
+        {
+            <div class="alert alert-danger">
+                @ex.Message
+            </div>
+        }
+    }
+}
+
+<form method="post" class="form-inline">
+    <div class="form-group">
+        <label for="name">Name: </label>
+        <input type="text" class="form-control" id="title" name="title" placeholder="Enter title">
+    </div>
+    <button type="submit" class="btn btn-success"> Add Award</button>
+</form>

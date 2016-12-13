@@ -1,0 +1,46 @@
+﻿@using Epam.UsersInfo.WebUI.Models;
+
+@{
+    Layout = "~/_Layout.cshtml";
+    bool failed = false;
+    if (IsPost)
+    {
+        var Id = Request["editId"];
+        int result;
+        if (int.TryParse(Id, out result))
+        {
+            if (Common.AwardBll.Contains(result))
+            {
+                <form action="~/Awards/EditAward" method="post">
+                    <input type="hidden" name="ID" value="@Id" />
+                    <input type="hidden" name="Visited" value="true" />
+                    <button type="submit" class="btn btn-success">Go to edit</button>
+                </form>
+                return;
+            }
+            else
+            {
+                <div class="alert alert-danger">
+                    Id not found
+                </div>
+            }
+        }
+        else
+        {
+            failed = true;
+        }
+    }
+}
+@if (failed)
+{
+    <div class="alert alert-danger">
+        Id is not correct
+    </div>
+}
+<form method="post" class="form-inline">
+    <div class="form-group">
+        <label for="editId">Check by ID</label>
+        <input type="text" class="form-control" id="editId" name="editId">
+    </div>
+    <button type="submit" class="btn btn-primary">Check</button>
+</form>

@@ -1,0 +1,45 @@
+﻿@using Epam.UsersInfo.WebUI.Models;
+@{
+    if (!User.IsInRole("Admin"))
+    {
+        Response.SetStatus(HttpStatusCode.Forbidden);
+    }
+    Layout = "~/_Layout.cshtml";
+    bool failed = false;
+    if (IsPost)
+    {
+        var Id = Request["deleteId"];
+        int result;
+        if (int.TryParse(Id, out result))
+        {
+            try
+            {
+                Common.UserBll.Delete(result);
+                Response.Redirect("~/Users/ShowUsers");
+            }
+            catch (Exception ex)
+            {
+            <div class="alert alert-danger" style="margin-top: 60px">
+                @ex.Message
+            </div>
+                }
+            }
+            else
+            {
+                failed = true;
+            }
+        } 
+    }
+@if (failed)
+{
+    <div class="alert alert-danger">
+        Id is not correct
+    </div>
+}
+<form method="post" class="form-inline">
+    <div class="form-group">
+        <label for="deleteId">ID</label>
+        <input type="text" class="form-control" id="deleteId" name="deleteId" placeholder="Enter Id">
+    </div>
+    <button type="submit" class="btn btn-danger"> Delete user</button>
+</form>
