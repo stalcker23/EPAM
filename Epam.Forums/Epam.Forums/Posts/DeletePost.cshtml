@@ -1,0 +1,37 @@
+﻿
+@using Epam.Forums.WebUI.Models;
+@{
+    Layout = "~/_Layout.cshtml";
+}
+@if (!User.Identity.IsAuthenticated)
+{
+    Response.SetStatus(HttpStatusCode.Unauthorized);
+    return;
+}
+
+@if (IsPost)
+{
+    var Id = int.Parse(Request["ID"]);
+    var idTopic = int.Parse(Request["idTopic"]);
+    try
+    {
+        Common.PostBll.RemovePost(Id);
+        Response.Redirect("~/Topics/Details?id=" + idTopic);
+    }
+    catch (Exception ex)
+    {
+        <form action="~/Topics/RemoveTopic" method="post">
+            <div class="alert alert-danger">
+                @ex.Message
+            </div>
+        </form>
+        return;
+    }
+    Response.Redirect("~/Forums/ShowForums");
+
+    return;
+}
+else
+{
+    Response.SetStatus(HttpStatusCode.NotFound);
+}

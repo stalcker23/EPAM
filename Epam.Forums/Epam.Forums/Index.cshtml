@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container col-xs-offset-4 col-xs-4">
+        @if (!User.Identity.IsAuthenticated)
+        {
+            <a class="btn btn-primary btn-lg btn-block" href="~/Auth/Login">Sign In</a>
+            <a class="btn btn-primary btn-lg btn-block" href="~/Auth/Registration">Registration</a>
+            <a class="btn btn-primary btn-lg btn-block" href="~/Forums/ShowForums">Visit as guest</a>
+        }
+        else
+        {
+            <a class="btn btn-primary btn-lg btn-block" href="~/Users/ShowUsers">Show users</a>
+            <a class="btn btn-primary btn-lg btn-block" href="~/Forums/ShowForums">Show forums</a>
+            <a class="btn btn-primary btn-lg btn-block" href="~/Auth/Logout.cshtml">Logout</a>
+        }
+    </div>
+    <script src="~/Scripts/jquery-3.1.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>

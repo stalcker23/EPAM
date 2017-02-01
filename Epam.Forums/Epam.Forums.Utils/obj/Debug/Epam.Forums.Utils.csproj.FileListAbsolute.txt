@@ -1,0 +1,9 @@
+C:\Users\a-zen\OneDrive\Документы\Visual Studio 2015\Projects\Epam.Forums\Epam.Forums.Utils\obj\Debug\Epam.Forums.Utils.csprojResolveAssemblyReference.cache
+C:\Users\a-zen\OneDrive\Документы\Visual Studio 2015\Projects\Epam.Forums\Epam.Forums.Utils\bin\Debug\Epam.Forums.Utils.dll
+C:\Users\a-zen\OneDrive\Документы\Visual Studio 2015\Projects\Epam.Forums\Epam.Forums.Utils\bin\Debug\Epam.Forums.Utils.pdb
+C:\Users\a-zen\OneDrive\Документы\Visual Studio 2015\Projects\Epam.Forums\Epam.Forums.Utils\bin\Debug\Epam.Forums.Entities.dll
+C:\Users\a-zen\OneDrive\Документы\Visual Studio 2015\Projects\Epam.Forums\Epam.Forums.Utils\bin\Debug\log4net.dll
+C:\Users\a-zen\OneDrive\Документы\Visual Studio 2015\Projects\Epam.Forums\Epam.Forums.Utils\bin\Debug\Epam.Forums.Entities.pdb
+C:\Users\a-zen\OneDrive\Документы\Visual Studio 2015\Projects\Epam.Forums\Epam.Forums.Utils\bin\Debug\log4net.xml
+C:\Users\a-zen\OneDrive\Документы\Visual Studio 2015\Projects\Epam.Forums\Epam.Forums.Utils\obj\Debug\Epam.Forums.Utils.dll
+C:\Users\a-zen\OneDrive\Документы\Visual Studio 2015\Projects\Epam.Forums\Epam.Forums.Utils\obj\Debug\Epam.Forums.Utils.pdb

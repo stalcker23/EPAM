@@ -1,0 +1,42 @@
+﻿@using Epam.Forums.WebUI.Models;
+@{
+    Layout = "~/_Layout.cshtml";
+}
+@section scripts{
+    <script src="~/Scripts/search.js"></script>
+}
+<div class="container">
+    @{
+        var selectListItems = Common.ForumBll.GetAllForums().Select(x => new SelectListItem() { Text = x.Name }).ToList();
+
+    }
+
+    <hr />
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label class="control-label">Theme</label>
+                <input id="title" name="title" placeholder="AS, for example" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Forum</label>
+                <div class="form-group forum">
+                    @Html.DropDownList("ForumId", "All", selectListItems, new { @class = "form-control forum" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Author</label>
+                <input id="author" name="author" placeholder="ART, for example" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <input type="submit" id="searchButton" value="Search" class="btn btn-default" />
+            </div>
+            <div id="topicsDetails">
+            </div>
+        </div>
+    </div>
+</div>
+

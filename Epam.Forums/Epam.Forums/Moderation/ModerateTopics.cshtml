@@ -1,0 +1,41 @@
+﻿
+@using Epam.Forums.WebUI.Models;
+@{
+    Layout = "~/_Layout.cshtml";
+}
+@if (!User.Identity.IsAuthenticated)
+{
+    Response.SetStatus(HttpStatusCode.Unauthorized);
+    return;
+}
+
+@if (!User.IsInRole("admin"))
+{
+    Response.SetStatus(HttpStatusCode.Forbidden);
+    return;
+}
+
+@if (IsPost)
+{
+    var Id = int.Parse(Request["ID"]);
+    try
+    {
+        Common.TopicBll.ModerateTopic(Id);
+        Response.Redirect($"~/Forums/Details?id={Common.TopicBll.GetForumIdByTopicId(Id)}");
+    }
+    catch (Exception ex)
+    {
+       
+            <div class="alert alert-danger">
+                @ex.Message
+            </div>
+        return;
+    }
+    Response.Redirect($"~/Forums/Details?id={Common.TopicBll.GetForumIdByTopicId(Id)}");
+
+    return;
+}
+else
+{
+    Response.SetStatus(HttpStatusCode.NotFound);
+}

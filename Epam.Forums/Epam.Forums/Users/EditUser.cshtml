@@ -1,0 +1,33 @@
+﻿@using Epam.Forums.WebUI.Models;
+@using Epam.Forums.Entities;
+@using System.Globalization;
+@{
+
+    Layout = "~/_Layout.cshtml";
+
+    if (IsAjax)
+    {
+
+        var Id = int.Parse(Request["ID"]);
+        var name = Request["title"];
+        try
+        {
+            if (String.IsNullOrWhiteSpace(name))
+            {
+                throw new ArgumentException("Name can't be null or white space");
+            }
+
+            string userName = name;
+            Common.UserBll.UpdateUser(Id, new User { Name = userName });
+            Response.Redirect($"~/Users/Details?id={Id}");
+
+        }
+        catch (Exception ex)
+        {
+            <div class="alert alert-danger">
+                @ex.Message
+            </div>
+        }
+    }
+
+}

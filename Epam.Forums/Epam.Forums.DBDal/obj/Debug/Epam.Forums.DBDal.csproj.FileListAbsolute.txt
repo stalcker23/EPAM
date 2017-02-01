@@ -1,0 +1,11 @@
+C:\Users\a-zen\onedrive\документы\visual studio 2015\Projects\Epam.Forums\Epam.Forums.DBDal\bin\Debug\Epam.Forums.DBDal.dll
+C:\Users\a-zen\onedrive\документы\visual studio 2015\Projects\Epam.Forums\Epam.Forums.DBDal\bin\Debug\Epam.Forums.DBDal.pdb
+C:\Users\a-zen\onedrive\документы\visual studio 2015\Projects\Epam.Forums\Epam.Forums.DBDal\bin\Debug\Epam.Forums.DalContracts.dll
+C:\Users\a-zen\onedrive\документы\visual studio 2015\Projects\Epam.Forums\Epam.Forums.DBDal\bin\Debug\Epam.Forums.Entities.dll
+C:\Users\a-zen\onedrive\документы\visual studio 2015\Projects\Epam.Forums\Epam.Forums.DBDal\bin\Debug\Epam.Forums.DalContracts.pdb
+C:\Users\a-zen\onedrive\документы\visual studio 2015\Projects\Epam.Forums\Epam.Forums.DBDal\bin\Debug\Epam.Forums.Entities.pdb
+C:\Users\a-zen\onedrive\документы\visual studio 2015\Projects\Epam.Forums\Epam.Forums.DBDal\obj\Debug\Epam.Forums.DBDal.csprojResolveAssemblyReference.cache
+C:\Users\a-zen\onedrive\документы\visual studio 2015\Projects\Epam.Forums\Epam.Forums.DBDal\obj\Debug\Epam.Forums.DBDal.dll
+C:\Users\a-zen\onedrive\документы\visual studio 2015\Projects\Epam.Forums\Epam.Forums.DBDal\obj\Debug\Epam.Forums.DBDal.pdb
+C:\Users\a-zen\OneDrive\Документы\Visual Studio 2015\Projects\Epam.Forums\Epam.Forums.DBDal\bin\Debug\log4net.dll
+C:\Users\a-zen\OneDrive\Документы\Visual Studio 2015\Projects\Epam.Forums\Epam.Forums.DBDal\bin\Debug\log4net.xml

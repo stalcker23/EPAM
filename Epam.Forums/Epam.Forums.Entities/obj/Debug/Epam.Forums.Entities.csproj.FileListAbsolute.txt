@@ -1,0 +1,6 @@
+C:\Users\a-zen\onedrive\документы\visual studio 2015\Projects\Epam.Forums\Epam.Forums.Entities\bin\Debug\Epam.Forums.Entities.dll
+C:\Users\a-zen\onedrive\документы\visual studio 2015\Projects\Epam.Forums\Epam.Forums.Entities\bin\Debug\Epam.Forums.Entities.pdb
+C:\Users\a-zen\onedrive\документы\visual studio 2015\Projects\Epam.Forums\Epam.Forums.Entities\obj\Debug\Epam.Forums.Entities.dll
+C:\Users\a-zen\onedrive\документы\visual studio 2015\Projects\Epam.Forums\Epam.Forums.Entities\obj\Debug\Epam.Forums.Entities.pdb
+C:\Users\a-zen\OneDrive\Документы\Visual Studio 2015\Projects\Epam.Forums\Epam.Forums.Entities\bin\Debug\log4net.dll
+C:\Users\a-zen\OneDrive\Документы\Visual Studio 2015\Projects\Epam.Forums\Epam.Forums.Entities\bin\Debug\log4net.xml

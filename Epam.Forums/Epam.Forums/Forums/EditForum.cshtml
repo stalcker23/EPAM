@@ -1,0 +1,60 @@
+﻿@using System.Globalization;
+@using Epam.Forums.Entities;
+@using Epam.Forums.WebUI.Models;
+@{
+    Layout = "~/_Layout.cshtml";
+}
+
+@section scripts{
+    <script src="~/Scripts/Forum.js"></script>
+    <script src="~/Scripts/editForum.js"></script>
+}
+@{
+    if (!User.IsInRole("Admin"))
+    {
+        Response.SetStatus(HttpStatusCode.Forbidden);
+    }
+    <h2>Edit forum</h2>
+    <hr />
+
+
+    if (IsAjax)
+    {
+        Validation.Add("name", Validator.Range(3, 12, "Name range is 3-12 letters"));
+        Validation.Add("description", Validator.Range(5, 40, "Description range is 5-40 letters"));
+        var name = Request["title"];
+        var id = int.Parse(Request["ID"]);
+        var description = Request["description"];
+        if (Validation.IsValid())
+        {
+            try
+            {
+                if (String.IsNullOrEmpty(name) || String.IsNullOrEmpty(description))
+                {
+                    throw new ArgumentException("Name or description can't be null or empty");
+                }
+                Common.ForumBll.EditForum(id, name, description);
+                Response.Redirect("~/Forums/Details?id=" + id);
+
+            }
+            catch (Exception ex)
+            {
+            <div class="alert alert-danger">
+                @ex.Message
+            </div>
+            }
+        }
+        else
+        {
+            <ul class="alert alert-danger">
+                @Html.ValidationSummary()
+            </ul>
+        }
+    }
+    else
+    {
+        Response.SetStatus(HttpStatusCode.BadRequest);
+        return;
+    }
+}
+

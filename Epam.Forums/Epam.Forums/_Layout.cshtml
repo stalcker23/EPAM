@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Forum.css" rel="stylesheet" />
+</head>
+<body>
+
+
+                        @using Epam.Forums.WebUI.Models;
+                        <div class="navbar navbar-inverse navbar-fixed-top navbar-custom">
+                            <div class="container">
+                                
+                                    <ul class="nav navbar-nav navbar-left">
+                                        <li>
+                                            <a style="font-size:large" href="~/Forums/ShowForums">Forums</a>
+                                        </li>
+                                        <li>
+                                            <a style="font-size:large" href="~/Search/Search">Search</a>
+                                        </li>
+                                        @if (User.IsInRole("Admin"))
+                                        {
+                                            <li class="dropdown">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Users <span class="caret"></span></a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="~/Users/ShowUsers">Show all</a></li>
+                                                </ul>
+                                            </li>
+                                        }
+                                    </ul>
+
+                                    <ul class="nav navbar-nav navbar-right">
+
+                                        @if (User.Identity.IsAuthenticated)
+                                        {
+                                            <li class="dropdown">
+
+                                                <a href="#" class="dropdown-toggle alert-success" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@User.Identity.Name <span class="caret"></span></a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a name="id" href="~/Users/Details?id=@Common.UserBll.GetUserByLogin(User.Identity.Name).Id">Options</a></li>
+                                                    <li><a href="~/Auth/Logout.cshtml">Logout</a></li>
+
+                                                </ul>
+                                            </li>
+                                        }
+
+                                        else
+                                        {
+                                            <li>
+                                                <a href="~/Auth/Login" style="font-size:large"> Guest. Sign in</a>
+                                            </li>
+                                        }
+                                    </ul>
+                                
+                            </div>
+                        </div>
+                        <div class="container body-content">
+                            @RenderBody()
+                            <hr />
+                            <footer>
+                                <p>Forums &copy; @DateTime.Now.Year Akimov A.</p>
+                            </footer>
+                        </div>
+                        <script src="~/Scripts/jquery-3.1.1.min.js"></script>
+                        <script src="~/Scripts/bootstrap.min.js"></script>
+                        @RenderSection("scripts", required: false);
+
+</body>
+
+</html>

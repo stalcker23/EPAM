@@ -1,0 +1,53 @@
+﻿@using System.Globalization;
+@using Epam.Forums.Entities;
+@using Epam.Forums.WebUI.Models;
+@section scripts{
+    <script src="~/Scripts/goBack.js"></script>
+}
+@{
+    var idTopic = int.Parse(Request["id"]);
+    if (!User.Identity.IsAuthenticated)
+    {
+        Response.SetStatus(HttpStatusCode.Forbidden);
+    }
+    <h2>New post</h2>
+    <hr />
+    Layout = "~/_Layout.cshtml";
+    if (IsPost)
+    {
+        {
+            var text = Request["text"];
+            try
+            {
+                if (String.IsNullOrEmpty(text))
+                {
+                    throw new ArgumentException("Text can't be null or empty");
+                }
+                Common.PostBll.AddPost(new Post { CreateDate = DateTime.Now, Text = text, UserLogin = User.Identity.Name, TopicTitle = Common.TopicBll.GetTopicById(idTopic).Title });
+                Response.Redirect("~/Topics/Details?id=" + idTopic);
+
+            }
+            catch (Exception ex)
+            {
+                <div class="alert alert-danger">
+                    @ex.Message
+                </div>
+            }
+        }
+    }
+}
+<div class="row">
+    <div class="col-sm-7">
+        <form method="post">
+            <div class="form-group">
+                <label for="text" class="control-label">Text </label>
+                <textarea name="text" class="form-control" rows="5" id="text"></textarea>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Add" class="btn btn-default" />
+                <input type="button" id="goBack" class="btn btn-default" value="Back">
+            </div>
+            <input type="hidden" name="id" value="@idTopic" />
+        </form>
+    </div>
+</div>

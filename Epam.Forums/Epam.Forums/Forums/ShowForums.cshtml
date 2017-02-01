@@ -1,0 +1,48 @@
+﻿@using Epam.Forums.WebUI.Models;
+@{
+    Layout = "~/_Layout.cshtml";
+}
+<div class="container">
+    <h2>Forums</h2>
+    <hr />
+    @if(User.IsInRole("admin"))
+    {
+    <a class="btn btn-default" role="button" href="~/Forums/AddForum">Добавить форум</a>
+    }
+
+    <table class="table table-bordered forums">
+        <thead>
+            <tr>
+                <th class="col-lg-9">Forum</th>
+                <th class="col-lg-2">Author</th>
+                <th class="col-lg-1">Count of topics</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var forum in Common.ForumBll.GetAllForums())
+            {
+
+                <tr>
+                    <td>
+                        <a href="~/Forums/Details?id=@forum.ID" name="id">@forum.Name</a>
+                        <div class="forums__forum-desc">
+                            @forum.Description
+                        </div>
+                    </td>
+                    <td>
+                        @{
+                            var forumUser = Common.UserBll.GetUserByLogin(forum.UserLogin);
+                        }
+                        <form class="form-inline" action="~/Users/Details?id=@forumUser.Id" method="get">
+                            <input type="hidden" name="id" value="@forumUser.Id" />
+                            <button type="submit" class="btn-link">@forumUser.Login</button>
+                        </form>
+                    </td>
+                    <td>@Common.ForumBll.CountOfTopics(forum.ID)</td>
+
+                </tr>
+                            }
+        </tbody>
+    </table>
+</div>

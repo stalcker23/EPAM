@@ -1,0 +1,41 @@
+﻿@using Epam.Forums.Entities;
+@using Epam.Forums.WebUI.Models;
+@{
+    if (!IsPost)
+    {
+        Response.SetStatus(HttpStatusCode.BadRequest);
+        return;
+    }
+
+    var type = Request["type"];
+    var file = Request.Files["uploaded"];
+    byte[] data = new byte[file.ContentLength];
+    int len = file.InputStream.Read(data, 0, file.ContentLength);
+    var photo = new Photo(data, file.ContentType);
+    if (type == "user")
+    {
+        var id = int.Parse(Request["userId"]);
+
+        if (Common.ImageBll.AddImageToUser(id, photo))
+        {
+            Response.Redirect($"~/Users/Details?id={id}");
+        }
+        else
+        {
+            Response.Redirect("~/?failed");
+        }
+    }
+    if (type == "topic")
+    {
+        var id = int.Parse(Request["topicId"]);
+
+        if (Common.ImageBll.AddImageToTopic(id, photo))
+        {
+            Response.Redirect($"~/Topics/Details?id={id}&forumId={Common.TopicBll.GetForumIdByTopicId(id)}");
+        }
+        else
+        {
+            Response.Redirect("~/?failed");
+        }
+    }
+}

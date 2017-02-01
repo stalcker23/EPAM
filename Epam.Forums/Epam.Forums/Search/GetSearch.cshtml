@@ -1,0 +1,83 @@
+﻿@using Epam.Forums.WebUI.Models;
+@if (this.IsAjax)
+{
+    try
+    {
+
+
+        var title = Request["title"];
+        var author = Request["author"];
+        var forumName = Request["forum"];
+
+        var topics = Common.TopicBll.FindTopics(title, author, forumName);
+        if (topics.Count() == 0)
+        {
+            <div class="alert alert-danger">
+                Empty search
+            </div>
+            return;
+        }
+        <table class="table table-bordered topics">
+            <thead>
+                <tr>
+                    <th class="col-lg-6">Theme</th>
+                    <th class="col-lg-1">Answers</th>
+                    <th class="col-lg-1">Author</th>
+                    <th class="col-lg-3">Update</th>
+                    <th class="col-lg-1">Lock Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var topic in topics)
+                {
+                    var forum = Common.ForumBll.GetForumByID(Common.TopicBll.GetForumIdByTopicId(topic.ID));
+                    <tr>
+                        <td>
+                            <form action="~/Topics/Details?id=@topic.ID" method="get">
+                                <input type="hidden" name="id" value="@topic.ID" />
+                                <input type="hidden" name="forumId" value="@forum.ID" />
+                                <button type="submit" class="btn-link">@topic.Title</button>
+                            </form>
+                        </td>
+                        <td>@Common.TopicBll.CountOfPosts(topic.ID)</td>
+                        <td>
+                            @{
+                                var topicUser = Common.UserBll.GetUserByLogin(forum.UserLogin);
+                            }
+                            <form action="~/Users/Details?id=@topicUser.Id" method="get">
+                                <input type="hidden" name="id" value="@topicUser.Id" />
+                                <button type="submit" class="btn-link">@topicUser.Login</button>
+                            </form>
+                        </td>
+                        @if (topic.ModifyDate == null)
+                        {
+                            <td>No updates</td>
+                        }
+                        else
+                        {
+                            <td>Update time: @topic.ModifyDate</td>
+                        }
+                        @if (topic.LockDate == null)
+                        {
+                            <td>Opened</td>
+                        }
+                        else
+                        {
+                            <td>Lock time: @topic.ModifyDate</td>
+                        }
+                    </tr>
+                                }
+            </tbody>
+        </table>
+
+                                    return;
+                                }
+                                catch (Exception e)
+                                {
+                                    <div class="alert alert-danger">
+                                        @e.Message
+                                    </div>
+                                        return;
+
+                                    }
+                                }

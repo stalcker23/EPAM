@@ -1,0 +1,9 @@
+C:\Users\a-zen\onedrive\документы\visual studio 2015\Projects\Epam.Forums\Epam.Forums.LogicContracts\bin\Debug\Epam.Forums.LogicContracts.dll
+C:\Users\a-zen\onedrive\документы\visual studio 2015\Projects\Epam.Forums\Epam.Forums.LogicContracts\bin\Debug\Epam.Forums.LogicContracts.pdb
+C:\Users\a-zen\onedrive\документы\visual studio 2015\Projects\Epam.Forums\Epam.Forums.LogicContracts\bin\Debug\Epam.Forums.Entities.dll
+C:\Users\a-zen\onedrive\документы\visual studio 2015\Projects\Epam.Forums\Epam.Forums.LogicContracts\bin\Debug\Epam.Forums.Entities.pdb
+C:\Users\a-zen\onedrive\документы\visual studio 2015\Projects\Epam.Forums\Epam.Forums.LogicContracts\obj\Debug\Epam.Forums.LogicContracts.csprojResolveAssemblyReference.cache
+C:\Users\a-zen\onedrive\документы\visual studio 2015\Projects\Epam.Forums\Epam.Forums.LogicContracts\obj\Debug\Epam.Forums.LogicContracts.dll
+C:\Users\a-zen\onedrive\документы\visual studio 2015\Projects\Epam.Forums\Epam.Forums.LogicContracts\obj\Debug\Epam.Forums.LogicContracts.pdb
+C:\Users\a-zen\OneDrive\Документы\Visual Studio 2015\Projects\Epam.Forums\Epam.Forums.LogicContracts\bin\Debug\log4net.dll
+C:\Users\a-zen\OneDrive\Документы\Visual Studio 2015\Projects\Epam.Forums\Epam.Forums.LogicContracts\bin\Debug\log4net.xml

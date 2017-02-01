@@ -1,0 +1,43 @@
+﻿
+@using Epam.Forums.WebUI.Models;
+@{
+    Layout = "~/_Layout.cshtml";
+}
+@if (!User.Identity.IsAuthenticated)
+{
+    Response.SetStatus(HttpStatusCode.Unauthorized);
+    return;
+}
+
+@if (!User.IsInRole("admin"))
+{
+    Response.SetStatus(HttpStatusCode.Forbidden);
+    return;
+}
+
+@if (IsPost)
+{
+    var Id = int.Parse(Request["ID"]);
+    try
+    {
+        Common.UserBll.ChangeUserRole(Id);
+        Response.Redirect("~/Users/ShowUsers");
+    }
+    catch (Exception ex)
+    {
+        <form action="~/ChangeUserRole" method="post">
+            <div class="alert alert-danger">
+                @ex.Message
+            </div>
+            <a class="btn btn-primary btn-lg btn-block" href="~/Users/ShowUsers">Edit another account</a>
+        </form>
+        return;
+    }
+    Response.Redirect("~/Users/ShowUsers");
+
+    return;
+}
+else
+{
+    Response.SetStatus(HttpStatusCode.NotFound);
+}

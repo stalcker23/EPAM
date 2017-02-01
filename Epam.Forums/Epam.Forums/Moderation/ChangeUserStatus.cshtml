@@ -1,0 +1,35 @@
+﻿
+@using Epam.Forums.WebUI.Models;
+@if (!User.Identity.IsAuthenticated)
+{
+    Response.SetStatus(HttpStatusCode.Unauthorized);
+    return;
+}
+
+@if (!User.IsInRole("admin"))
+{
+    Response.SetStatus(HttpStatusCode.Forbidden);
+    return;
+}
+
+@if (IsPost)
+{
+    var stringId = Request["id"];
+    int id;
+    if (string.IsNullOrWhiteSpace(stringId) || !int.TryParse(stringId, out id))
+    {
+        Response.SetStatus(HttpStatusCode.BadRequest);
+        return;
+    }
+
+    var Id = int.Parse(Request["ID"]);
+    Common.UserBll.ChangeUserStatus(Id);
+
+    Response.Redirect("~/Users/ShowUsers");
+
+    return;
+}
+else
+{
+    Response.SetStatus(HttpStatusCode.NotFound);
+}

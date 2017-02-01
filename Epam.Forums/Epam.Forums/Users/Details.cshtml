@@ -1,0 +1,79 @@
+﻿@using Epam.Forums.WebUI.Models;
+@{
+    Layout = "~/_Layout.cshtml";
+}
+@section scripts{
+    <script src="~/Scripts/goBack.js"></script>
+    <script src="~/Scripts/editUser.js"></script>
+}
+
+<div class="container">
+    <div>
+        @if (!IsPost)
+        {
+            try
+            {
+                var Id = int.Parse(Request["ID"]);
+                var user = Common.UserBll.GetUserById(Id);
+                <input type="hidden" id="idElement" name="id" value="@Id" />
+                <input type="hidden" id="titleElement" name="nameTopic" value="@user.Name" />
+                <div id="titleDefinition">
+                    <h2 id="elementTitle">@user.Name</h2>
+                </div>
+                <hr />
+                <div>
+                    <img src="~/Images/Photos?id=@user.Photo.Id" alt="noneimage" class="img-rounded img-responsive img-thumbnail" />
+
+                    @if (String.Equals(User.Identity.Name, user.Login, StringComparison.CurrentCultureIgnoreCase))
+                    {
+                        <form action="~/Images/UploadImage" method="post" enctype="multipart/form-data" class="form-inline custom-form">
+                            <div class="form-group">
+                                <label class="btn btn btn-primary btn-file">
+                                    Choose file
+                                    <input style="display: none" type="file" name="uploaded" class="form-control" />
+                                </label>
+                                <input type="hidden" name="userId" value="@Request["ID"]" />
+                                <input type="hidden" name="type" value="user" />
+                                <button class="btn btn-primary" type="submit">Upload</button>
+                            </div>
+                        </form>
+                    }
+
+                </div>
+                <div>
+                    <div class="glyphicon glyphicon-envelope h2">@user.Login</div>
+                </div>
+                <div><b>Дата регистрации:</b> @user.DateOfRegistration</div>
+                <ul class="list-inline">
+                    @if (String.Equals(User.Identity.Name, user.Login, StringComparison.CurrentCultureIgnoreCase))
+                    {
+
+                        <li>
+                            <div>
+                                <button id="editButton" class="btn btn-default">Edit name</button>
+                            </div>
+                        </li>
+
+                        <li>
+                            <a class="btn btn-default" role="button" href="~/Users/EditPassword">Edit password</a>
+                            <input type="button" id="goBack" class="btn btn-default" value="Back">
+                        </li>
+                    }
+                </ul>
+                if(user.IsBanned)
+                {
+                    <div class="alert alert-danger">
+                        Your account has been banned. Contact the 
+                        <a href="~/Users/Details?id=4">Administration</a>
+                    </div>
+                }
+
+            }
+            catch
+            {
+                Response.SetStatus(HttpStatusCode.BadRequest);
+                return;
+            }
+        }
+    </div>
+</div>

@@ -1,0 +1,162 @@
+﻿@using Epam.Forums.WebUI.Models;
+@{
+    Layout = "~/_Layout.cshtml";
+}
+
+@section scripts{
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+    <script src="~/Scripts/editForum.js"></script>
+    <script src="~/Scripts/removeElement.js"></script>
+}
+
+@if (!IsPost)
+{
+    try
+    {
+
+        Validation.Add("name", Validator.Range(3, 12, "Name range is 3-12 letters"));
+        Validation.Add("description", Validator.Range(5, 40, "Description range is 5-40 letters"));
+        var id = Int32.Parse(Request["id"]);
+        var forum = Common.ForumBll.GetForumByID(id);
+        if (Validation.IsValid())
+        {
+            <input type="hidden" id="idElement" name="id" value="@id" />
+            <input type="hidden" id="titleElement" name="nameTopic" value="@forum.Name" />
+            <input type="hidden" id="descriptionElement" name="descriptionTopic" value="@forum.Description" />
+            <div id="titleDefinition">
+                <h2 name="name" id="elementTitle">@forum.Name</h2>
+            </div>
+            <div id="elementDetails" class="forum-details">
+                <div name="description" id="description" class="forum-details__desc">
+                    @forum.Description
+                </div>
+                <div>
+                    @{
+                        var forumUser = Common.UserBll.GetUserByLogin(forum.UserLogin);
+                    }
+                    <form class="glyphicon glyphicon-user post-details__author" action="~/Users/Details?id=@forumUser.Id" method="get">
+                        <input type="hidden" name="id" value="@forumUser.Id" />
+                        <button type="submit" class="btn-link">@forumUser.Login</button>
+                    </form>
+                    <span class="forum-details__dates glyphicon glyphicon-time">    @forum.CreateDate</span>
+                </div>
+
+                <hr />
+                <ul class="list-inline">
+                    @if (String.Equals(User.Identity.Name, forum.UserLogin, StringComparison.CurrentCultureIgnoreCase))
+                    {
+                        <li>
+                            <button id="editButton" class="btn btn-default">Edit</button>
+                        </li>
+                        <li>
+                            <form action="~/Forums/DeleteForum" class="form-inline " method="post">
+                                <input type="hidden" name="id" value="@id" />
+                                <button type="submit" id="delete" class="btn btn-default deleteElement">Delete</button>
+                            </form>
+                        </li>
+                    }
+                    else if (User.Identity.IsAuthenticated && (!Common.UserBll.GetUserByLogin(User.Identity.Name).IsBanned))
+                    {
+                        <li>
+                            <form action="~/Topics/AddTopic" class="form-inline" method="get">
+                                <input type="hidden" name="id" value="@id" />
+                                <button type="submit" id="add" class="btn btn-default">Add new topic</button>
+                            </form>
+                        </li>
+                    }
+                    else
+                    {
+                        <li>
+                            <div class="alert alert-danger ">
+                                Get auth or your account has been banned.
+                            </div>
+                        </li>
+                    }
+                </ul>
+            </div>
+
+            <hr />
+            <table class="table table-bordered topics">
+                <thead>
+                    <tr>
+                        <th class="col-lg-6">Theme</th>
+                        <th class="col-lg-1">Answers</th>
+                        <th class="col-lg-1">Author</th>
+                        <th class="col-lg-2">Update Time</th>
+                        <th class="col-lg-2">Lock Time</th>
+                        @if (User.IsInRole("admin"))
+                        {
+                            <th class="col-lg-1">Moderate</th>
+                        }
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var topic in Common.ForumBll.GetTopicsByForumId(id))
+                    {
+                        <tr>
+                            <td>
+                                <form action="~/Topics/Details?id=@topic.ID" method="get">
+                                    <input type="hidden" name="id" value="@topic.ID" />
+                                    <input type="hidden" name="forumId" value="@forum.ID" />
+                                    <button type="submit" class="btn-link">@topic.Title</button>
+                                </form>
+                            </td>
+                            <td>@Common.TopicBll.CountOfPosts(topic.ID)</td>
+                            <td>
+                                @{
+                                    var topicUser = Common.UserBll.GetUserByLogin(topic.UserLogin);
+                                }
+                                <form action="~/Users/Details?id=@topicUser.Id" method="get">
+                                    <input type="hidden" name="id" value="@topicUser.Id" />
+                                    <button type="submit" class="btn-link">@topicUser.Login</button>
+                                </form>
+                            </td>
+                            @if (topic.ModifyDate == null)
+                            {
+                                <td>No updates</td>
+                            }
+                            else
+                            {
+                                <td>@topic.ModifyDate</td>
+                            }
+                            @if (topic.LockDate == null)
+                            {
+                                <td>Opened</td>
+                            }
+                            else
+                            {
+                                <td>@topic.LockDate</td>
+                            }
+                            @if (User.IsInRole("admin"))
+                            {
+                                <td>
+                                    @if (!topic.IsPublic)
+                                    {
+                                        <form action="~/Moderation/ModerateTopics" method="post">
+                                            <input type="hidden" name="id" value="@topic.ID" />
+                                            <button type="submit" class="btn btn-success">Unlock</button>
+                                        </form>
+                                    }
+                                    else
+                                    {
+                                        <form action="~/Moderation/ModerateTopics" method="post">
+                                            <input type="hidden" name="id" value="@topic.ID" />
+                                            <button type="submit" class="btn btn-danger">Lock</button>
+                                        </form>
+                                    }
+
+                                </td>
+                            }
+
+                        </tr>
+                                    }
+                </tbody>
+            </table>
+                                            }
+                                        }
+                                        catch
+                                        {
+                                            Response.SetStatus(HttpStatusCode.BadRequest);
+                                            return;
+                                        }
+                                    }

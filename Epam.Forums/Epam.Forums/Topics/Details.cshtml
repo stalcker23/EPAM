@@ -1,0 +1,177 @@
+﻿@using Epam.Forums.WebUI.Models;
+@{
+    Layout = "~/_Layout.cshtml";
+}
+@section scripts{
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+    <script src="~/Scripts/editTopic.js"></script>
+    <script src="~/Scripts/editPost.js"></script>
+    <script src="~/Scripts/removeElement.js"></script>
+}
+@if (!IsPost)
+{
+    try
+    {
+
+        var id = Int32.Parse(Request["id"]);
+        var topic = Common.TopicBll.GetTopicById(id);
+        var forumId = Common.TopicBll.GetForumIdByTopicId(id);
+        <input type="hidden" id="idElement" name="id" value="@id" />
+        <input type="hidden" id="titleElement" name="nameTopic" value="@topic.Title" />
+        <input type="hidden" id="descriptionElement" name="descriptionTopic" value="@topic.Description" />
+        <div class="container">
+            <ol class="breadcrumb">
+                <li><a href="~/Forums/ShowForums.cshtml">Forums</a></li>
+                <li><a href="~/Forums/Details?id=@forumId" name="id">@topic.ForumName</a></li>
+                <li class="active">@topic.Title</li>
+            </ol>
+            <div id="titleDefinition">
+                <h2 id="elementTitle">@topic.Title</h2>
+            </div>
+            <div id="elementDetails" class="post-details">
+                <div id="description" class="leftstr h2" style="word-break:break-all">
+                    @topic.Description
+                </div>
+
+                <div class="rightstr">
+
+                    @if (topic.ModifyDate == null)
+                    {
+                        <div class="post-details__modDate">No updates</div>
+                    }
+                    else
+                    {
+                        <div id="modifyDate" class="post-details__modDate">Update date: @topic.ModifyDate</div>
+                    }
+                    @if (topic.LockDate == null)
+                    {
+                        <div class="post-details__modDate">Opened</div>
+                    }
+                    else
+                    {
+                        <div class="post-details__modDate">Lock date: @topic.LockDate</div>
+                    }
+                    <div>
+                        <img src="~/Images/Photos?id=@topic.Photo.Id" alt="noneimage" class="img-rounded img-responsive img-thumbnail" />
+
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        @{
+                            var user = Common.UserBll.GetUserByLogin(topic.UserLogin);
+                        }
+                        <form class="glyphicon glyphicon-user post-details__author" action="~/Users/Details?id=@user.Id" method="get">
+                            <input type="hidden" name="id" value="@user.Id" />
+                            <button type="submit" class="btn-link">@user.Login</button>
+                        </form>
+                        <span class="glyphicon glyphicon-time post-details__date">    @topic.CreateDate</span>
+                    </div>
+                    @if (topic.IsPublic)
+                    {
+                        <ul class="list-inline">
+                            @if (String.Equals(User.Identity.Name, topic.UserLogin, StringComparison.CurrentCultureIgnoreCase))
+                        {
+                                <li>
+                                    <div>
+                                        <button id="editButton" class="btn btn-default">Edit</button>
+                                    </div>
+                                </li>
+                                <li>
+                                    <form action="~/Topics/DeleteTopic" class="form-inline" id="deleteForum" method="post">
+                                        <input type="hidden" name="id" value="@id" />
+                                        <button type="submit" class="btn btn-default deleteElement">Delete</button>
+                                    </form>
+                                </li>
+
+                            }
+                            @if (User.Identity.IsAuthenticated && (!Common.UserBll.GetUserByLogin(User.Identity.Name).IsBanned))
+                        {
+                                <li>
+                                    <form action="~/Posts/AddPost" class="form-inline" method="get">
+                                        <input type="hidden" name="id" value="@id" />
+                                        <button type="submit" id="add" class="btn btn-default">Add new post</button>
+                                    </form>
+                                </li>
+                            }
+                            @if (String.Equals(User.Identity.Name, topic.UserLogin, StringComparison.CurrentCultureIgnoreCase))
+                        {
+                                <li class="navbar-right">
+                                    <form action="~/Images/UploadImage" method="post" enctype="multipart/form-data" class="form-inline custom-form">
+                                        <div class="form-group">
+                                            <label class="btn btn btn-primary btn-file">
+                                                Choose file
+                                                <input style="display: none" type="file" name="uploaded" class="form-control" />
+                                            </label>
+                                            <input type="hidden" name="topicId" value="@Request["ID"]" />
+                                            <input type="hidden" name="type" value="topic" />
+                                            <button class="btn btn-primary" type="submit">Upload</button>
+                                        </div>
+                                    </form>
+                                </li>
+                            }
+                        </ul>
+                    }
+                </div>
+
+            </div>
+            @if (topic.IsPublic)
+            {
+                if (!Common.UserBll.GetUserByLogin(User.Identity.Name).IsBanned)
+                {
+                    foreach (var post in Common.TopicBll.GetPostsByTopicId(id))
+                    {
+                    <div id="post-details" class="post-details col-lg-11 pull-right">
+                        <div class="post-details__content">
+                            @Html.Raw(Html.Encode(post.Text).Replace("\n", "<br />"))
+                        </div>
+                        <div>
+                            @{
+                                var postUser = Common.UserBll.GetUserByLogin(post.UserLogin);
+                            }
+                            <form class="glyphicon glyphicon-user post-details__author" action="~/Users/Details?id=@postUser.Id" method="get">
+                                <input type="hidden" name="id" value="@postUser.Id" />
+                                <button type="submit" class="btn-link">@postUser.Login</button>
+                            </form>
+                            <span class="glyphicon glyphicon-time post-details__date">    @topic.CreateDate</span>
+                            <ul class="list-inline">
+                                @if (String.Equals(User.Identity.Name, post.UserLogin, StringComparison.CurrentCultureIgnoreCase))
+                                {
+                                    <li>
+                                        <input type="hidden" id="postText" name="postText" value="@post.Text" /> <input type="hidden" id="idPost" name="id" value="@post.ID" />
+                                        <input type="hidden" id="idTopic" name="idTopic" value="@topic.ID" /> <button class="btn btn-default editPostButton">Edit</button>
+                                    </li>
+                                    <li>
+                                        <form action="~/Posts/DeletePost" class="form-inline" id="deleteForum" method="post">
+                                            <input type="hidden" id="id" name="id" value="@post.ID" />
+                                            <input type="hidden" id="idTopic" name="idTopic" value="@topic.ID" /> <button type="submit" class="btn btn-default deleteElement">Delete post</button>
+                                        </form>
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                                    }
+                                }
+                                else
+                                {
+                                    <div class="alert alert-danger">
+                                        Your account has been banned. Contact the
+                                        <a href="~/Users/Details?id=4">Administration</a>
+                                    </div>
+                                    }
+                                }
+                                else
+                                {
+                                    <div class="alert alert-danger">
+                                        Topic is locked
+                                    </div>
+                                }
+        </div>
+                                    }
+                                    catch
+                                    {
+                                        Response.SetStatus(HttpStatusCode.BadRequest);
+                                        return;
+                                    }
+                                }

@@ -1,0 +1,84 @@
+﻿@using Epam.Forums.WebUI.Models;
+@{
+    Layout = "~/_Layout.cshtml";
+}
+@if (!User.Identity.IsAuthenticated)
+{
+    Response.SetStatus(HttpStatusCode.Unauthorized);
+    return;
+}
+
+@if (!User.IsInRole("admin"))
+{
+    Response.SetStatus(HttpStatusCode.Forbidden);
+    return;
+}
+<div class="panel panel-default">
+    <div class="panel-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Login</th>
+                    <th>DateOfRegistration</th>
+                    <th>User Status Action</th>
+                    <th>User Role Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var user in Common.UserBll.GetAllUsers())
+                {
+                    <tr>
+                        <td>@user.Id</td>
+                        <td>
+                            <form action="~/Users/Details?id=@user.Id" method="get">
+                                <input type="hidden" name="id" value="@user.Id" />
+                                <button type="submit" class="btn-link">@user.Login</button>
+                            </form>
+                        </td>
+                        <td>@user.DateOfRegistration.ToShortDateString()</td>
+                        <td>
+                            @if (Common.UserBll.GetUsersRole(user.Login) != "Admin")
+                            {
+                                if (user.IsBanned)
+                                {
+                                    <form action="~/Moderation/ChangeUserStatus" method="post">
+                                        <input type="hidden" name="id" value="@user.Id" />
+                                        <button type="submit" class="btn btn-success">Unban</button>
+                                    </form>
+                                }
+                                else
+                                {
+                                    <form action="~/Moderation/ChangeUserStatus" method="post">
+                                        <input type="hidden" name="id" value="@user.Id" />
+                                        <button type="submit" class="btn btn-danger">Ban</button>
+                                    </form>
+                                }
+                            }
+                            else
+                            {
+                                <label>Admin</label>
+                            }
+                        </td>
+                        <td>
+                            @if (Common.UserBll.GetUsersRole(user.Login) != "Admin")
+                            {
+                                <form action="~/Moderation/ChangeUserRole" method="post">
+                                    <input type="hidden" name="id" value="@user.Id" />
+                                    <button type="submit" class="btn btn-success">Promote</button>
+                                </form>
+                            }
+                            else
+                            {
+                                <form action="~/Moderation/ChangeUserRole" method="post">
+                                    <input type="hidden" name="id" value="@user.Id" />
+                                    <button type="submit" class="btn btn-danger">Demote</button>
+                                </form>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

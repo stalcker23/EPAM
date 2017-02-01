@@ -1,0 +1,49 @@
+﻿@using System.Globalization;
+@using Epam.Forums.Entities;
+@using Epam.Forums.WebUI.Models;
+@{
+    Layout = "~/_Layout.cshtml";
+}
+
+@section scripts{
+    <script src="~/Scripts/goBack.js"></script>
+}
+@{
+    if (!User.IsInRole("Admin"))
+    {
+        Response.SetStatus(HttpStatusCode.Forbidden);
+    }
+    <h2>Edit forum</h2>
+    <hr />
+
+    if (IsAjax)
+    {
+
+        var title = Request["title"];
+        var id = int.Parse(Request["id"]);
+        var description = Request["description"];
+
+        try
+        {
+            if (String.IsNullOrEmpty(title) || String.IsNullOrEmpty(description))
+            {
+                throw new ArgumentException("Name or description can't be null or empty");
+            }
+            Common.TopicBll.EditTopic(id, title, description);
+            Response.Redirect("~/Topics/Details?id=" + id);
+
+        }
+        catch (Exception ex)
+        {
+            <div class="alert alert-danger">
+                @ex.Message
+            </div>
+        }
+    }
+    else
+    {
+
+        Response.SetStatus(HttpStatusCode.BadRequest);
+        return;
+    }
+}
