@@ -3,9 +3,9 @@
 'use strict';
 (function () {
     var isEditStart = false,
-        editButton = $('.editPostButton').click(function () {
-            goEdit();
-            function goEdit() {
+        editButton = $('.editPostButton').click(function (event) {
+            goEdit(event);
+            function goEdit(event) {
                 var element,
                     textElement = $("#postText"),
                     text = textElement.text() || textElement.val();
@@ -19,8 +19,8 @@
                 placeholder="Enter description"
                 value= ${text} />`);
 
-                    $(".editPostButton").parents("div").first().siblings().remove()
-                    $(".editPostButton").parents("div").first().prepend($(element));
+                    $(event.target).parents("div").first().siblings().remove()
+                    $(event.target).parents("div").first().prepend($(element));
                     isEditStart = true;
                 }
                 else {
