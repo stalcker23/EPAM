@@ -1,0 +1,19 @@
+
+.listButtons{
+    padding: 0;
+    position: relative;
+    top: -20px;  
+    display: inline-block;
+}
+
+.listButtons>li{
+    display: block;
+}
+.moveButton{
+ width: 100px;
+
+}
+.butterflyControl>select{
+    width:250px;
+    height:100px;
+}
